@@ -1,13 +1,13 @@
 name: microservicio-1
 
 # Kubernetes namespace to install into (can be overridden)
-namespace: adonis-paz-dev
+namespace: mauricio-tc-ec-dev
 
 replicaCount: 1
 
 container:
   # Full image name without tag (e.g. 'adonispaz9506/hola-mundo-clase567')
-  image: "adonispaz9506/hola-mundo-clase567"
+  image: "mauriciotoapanta/hola-mundo-clase-86-10"
   tag: "{{ tag }}"
   port: 3000
 

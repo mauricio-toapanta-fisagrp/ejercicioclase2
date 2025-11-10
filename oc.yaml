@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mi-deployment-2
-  namespace: adonis-paz-dev
+  namespace: mauricio-tc-ec-dev
   labels:
     app: mi-app-2
     areanegocio: tecnologia
@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: contenedor-principal
-          image: adonispaz9506/hola-mundo-clase567:build-{{ tag }}  # <-- Reemplaza con la imagen que quieras usar
+          image: mauriciotoapanta/hola-mundo-clase-86-10:build-{{ tag }}  # <-- Reemplaza con la imagen que quieras usar
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
@@ -74,7 +74,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: mi-configmap-2
-  namespace: adonis-paz-dev
+  namespace: mauricio-tc-ec-dev
 data:
   DATABASE: "192.168.1.1"
 ---
@@ -82,7 +82,7 @@ apiVersion: v1
 kind: Secret
 metadata:
   name: mi-secret-2
-  namespace: adonis-paz-dev
+  namespace: mauricio-tc-ec-dev
 type: Opaque
 data:
   PASSWORD: aG9sYQ==
@@ -92,7 +92,7 @@ apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
   name: mi-hpa-2
-  namespace: adonis-paz-dev
+  namespace: mauricio-tc-ec-dev
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
@@ -112,7 +112,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: mi-pvc-2
-  namespace: adonis-paz-dev
+  namespace: mauricio-tc-ec-dev
 spec:
   accessModes:
     - ReadWriteOnce
