@@ -1,0 +1,13 @@
+name: CI-DockerBuild
+
+on: 
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    uses: apbusinessit/devops-pipelines/.github/workflows/docker-workflow.yml@main
+    with:
+      docker_image_name: hola-mundo-clase-86-10
+    secrets: inherit
